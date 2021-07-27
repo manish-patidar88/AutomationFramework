@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRM Suite">
+	<listeners>
+		<listener class-name="com.ohrm.qa.listeners.ListenerClass"></listener>
+		<listener class-name="com.ohrm.qa.listeners.MethodInterceptor">	</listener>	
+		<listener class-name="com.ohrm.qa.listeners.AnnotationTransformer"></listener>
+	</listeners>
+	<test thread-count="4" name="Test" parallel="methods">
+		<classes>
+			<!-- <class name="com.ohrm.qa.testcases.OrangeHRMTest" /> -->
+			<class name="com.ohrm.qa.testcases.OrangeHRMTestDataProviderExcel"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
